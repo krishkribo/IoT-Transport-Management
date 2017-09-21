@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title> ITS Public </title>
+    <style>
+    div.layout {
+      width: 100%;
+      overflow: auto;
+    }
+
+    header{
+        padding: 1em;
+        color: white;
+        background-color: #1a1a1a;
+        clear: left;
+        text-align: center;
+    }
+
+    article {
+
+        border-left: 1px solid gray;
+        padding: 1em;
+        overflow: hidden;
+    }
+    </style>
+</head>
+
+<body>
+<div class="layout">
+
+  <header>
+      <h1>Public Vehicle Management</h1><br>
+  </header>
+
+  <article>
+    <form method="POST" action="/result">
+      <table>
+        <tr>
+          <td> Source Station ID : <input type="text and numbers" name = "source"></td>
+        </tr>
+        <tr>
+          <td><br></td>
+        </tr>
+        <tr>
+          <td> Destination Station ID : <input type="text and numbers" name = "destination"></td>
+        </tr>
+        <tr>
+          <td><br></td>
+        </tr>
+      </table>
+      <input type="submit">
+    </form>
+  </article>
+
+</div>
+</body>
+</html>

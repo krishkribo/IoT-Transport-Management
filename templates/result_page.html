@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ITS Public Results</title>
+    <style>
+    div.layout {
+        width: 100%;
+        overflow: auto;
+    }
+
+    header {
+        padding: 1em;
+        color: white;
+        background-color: #1a1a1a;
+        clear: left;
+        text-align: center;
+    }
+
+    article {
+
+        border-left: 1px solid gray;
+        padding: 1em;
+        overflow: hidden;
+    }
+    table {
+      width:60%;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+      text-align: center;
+    }
+    table#t1 tr:nth-child(even) {
+      background-color: #eee;
+    }
+    table#t1 tr:nth-child(odd) {
+     background-color:#fff;
+    }
+    table#t1 th {
+      background-color: #404040;
+      color: white;
+    }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+
+<header>
+    <h1>Public Vehicle Management</h1><br>
+
+</header>
+
+<article>
+    <a href="http://0.0.0.0:8040/"><button type="button">Home</button></a>
+    <center>
+      <table id="t1" title="real_time_results">
+        <tr>
+          <th> Bus ID  </th>
+          <th> Bus No  </th>
+          <th> Last Station  </th>
+          <th> Seats Available  </th>
+          <th> Estimated time  </th>
+          <th> Status  </th>
+        </tr>
+        {% for i in values  %}
+        <tr>
+          <td> {{ i[0] }} </td>
+          <td> {{ i[1] }} </td>
+          <td> {{ i[2] }} </td>
+          <td> {{ i[3] }} </td>
+          <td> {{ i[4] }} </td>
+          <td> {{ i[5] }} </td>
+        </tr>
+        {% endfor %}
+      </table></center>
+</article>
+
+</div>
+
+</body>
+</html>
